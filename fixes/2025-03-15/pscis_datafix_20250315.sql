@@ -29,7 +29,10 @@ WHERE stream_crossing_id in (1018,1060,51655,199412);
 
 -- set barrier status of all above crossings to UNKNOWN
 UPDATE pscis.pscis_crossing_assessments
-SET barrier_result_code = 'UNKNOWN'
+SET
+  barrier_result_code = 'UNKNOWN',
+  who_updated = 'DATAFIX_20250315',
+  when_updated = sysdate
 WHERE stream_crossing_id in (4762,51668,51703,51704,51706,69295,196091,198901,198499,198499, 977,1839,3050,3138,3231,3298,3323,3380,3404,3728,6736,6737,7118,7185,7309,7432,7437,7438,7445,7889,52043,52044,54077,57122,57495,69205,69221,195265,196212,196355,199461,198645,198569,198464,198460,198441,1018,1060,51655,199412);
 
 -- ----------------------------------
